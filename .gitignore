@@ -4,4 +4,6 @@
 yarn.lock
 node_modules/
 services/client/node_modules/
+services/client/dist/
 services/graphql/node_modules/
+services/graphql/dist/
