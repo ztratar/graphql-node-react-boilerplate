@@ -1,0 +1,44 @@
+.buttonGroup {
+  &:focus {
+    outline: none;
+  }
+
+  & > a {
+    border-radius: 3px !important!
+  }
+
+  :global ul.dropdown-menu {
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.12s ease-out;
+    margin-top: 3px;
+  }
+
+  :global ul.dropdown-menu a {
+    padding: 8px 24px;
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+
+    &:hover {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+}
+
+.isOpen {
+  :global ul.dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    margin-top: 0;
+  }
+}
+
+.rightAligned {
+  :global .dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+  }
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+require('babel-register');
+require('babel-polyfill');
+require('source-map-support').install({
+  environment: 'node'
+});
+
+global.__NODE_ENV__ = process.env.NODE_ENV;
+global.__RELEASE_SHA__ = null;
+global.__DEV__ = true;
+
+var getModels = require('../src/models').default;
+
+var Promise = require('bluebird');
+
+Promise.all([
+  getModels({})
+])
+.then(() => process.exit(0))
+.catch(() => process.exit(1));

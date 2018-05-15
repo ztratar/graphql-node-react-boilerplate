@@ -1,0 +1,57 @@
+type Query {
+  ############
+  ### USER ###
+  ############
+
+  # Get the User object for the user making the request
+  getMyUser: User
+  # Search users
+  searchUsers: [User]!
+  # Get a list of Stripe transactions for the User
+  getTransactions: [UserTransaction]!
+
+  #############
+  ### TOPIC ###
+  #############
+
+  # Gets a Topic via a slug
+  getTopicBySlug(
+    # The query to get Topic objects for
+    input: TopicSlugQueryInput!
+  ): Topic!
+  # Suggest topics from a text entry
+  suggestTopics (
+    input: TopicSuggestInput!
+  ): [Topic]!
+  getTopicsWithPosts (
+    input: TopicQueryInput!
+  ): [Topic]!
+
+  ################
+  ### LOCATION ###
+  ################
+
+  # Search locations
+  searchLocations(
+    # The search input to search for Locations by
+    input: LocationSearchInput!
+  ): [Location]!
+
+  ############
+  ### POST ###
+  ############
+
+  # Gets a Post via a slug
+  getPostBySlug(
+    # The query to get Post objects for
+    query: PostQueryInput!
+  ): Post
+  # Gets Posts
+  getPosts(
+    query: PostFindInput!
+  ): [Post]!
+  searchPosts(
+    input: SearchPostsInput!
+  ): [Post]!
+  getTopPosts: [Post]!
+}

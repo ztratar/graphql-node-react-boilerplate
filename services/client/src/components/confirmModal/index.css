@@ -1,0 +1,21 @@
+.confirmModal {
+}
+
+.actions {
+  background: #fbf8f8;
+  margin: 42px -42px -42px;
+  border-radius: 0 0 5px 5px;
+  padding: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.06);
+  font-size: 0;
+
+  a {
+    width: 49%;
+    margin-right: 2%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

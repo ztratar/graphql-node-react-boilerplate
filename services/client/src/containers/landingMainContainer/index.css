@@ -1,0 +1,35 @@
+.landingContainer {
+  h2 {
+    opacity: 0.92;
+    font-family: 'Lato';
+    font-size: 24px;
+    color: #232736;
+    line-height: 29px;
+    margin: 0 0 14px;
+
+    @media (max-width: $screenSm) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  p small {
+    font-family: 'Lato';
+    font-style: italic;
+    font-size: 16px;
+    color: #757988;
+    line-height: 22px;
+    max-width: 546px;
+    margin: 0 auto;
+    display: block;
+
+    @media (max-width: $screenSm) {
+      font-size: 14px;
+      padding: 0 18px;
+    }
+
+    a {
+      color: $blue;
+    }
+  }
+}

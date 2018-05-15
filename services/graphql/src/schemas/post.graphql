@@ -1,0 +1,79 @@
+# Used to model the Post object
+type Post implements Resource {
+  # Primary key
+  id: ID!
+  # The Post's slug
+  slug: String!
+  # The Post's title
+  title: String!
+  # The Post's content
+  content: String!
+  # The Posts's summary
+  summary: String
+  # The Post's status
+  status: String
+  # The Posts's estimated read time
+  estimatedReadTime: Int!
+  # Time that the Post was created
+  createdAt: Date!
+  # Time that the Post was last updated
+  updatedAt: Date!
+  # Time that the Post was destroyed
+  destroyedAt: Date
+  # Whether or not the Post has been destroyed
+  destroyed: Boolean!
+
+
+  # The File<Image> attached to the Post
+  Image: File
+  # The User<Creator> attached to the Post
+  Creator: User
+  # The Topics attached to the Post
+  Topics: [Topic]
+}
+
+input PostInput {
+  # Primary key
+  id: ID
+  # The Post's title
+  title: String
+  # The Post's content
+  content: String
+  # The Post's summary
+  summary: String
+  # The Post's status
+  status: String
+  # The type of the post
+  type: String
+
+
+  # The File<Image> attached to the Post
+  Image: FileInput
+  # The User attached to the Post
+  Creator: UserInput
+  # The Topics attached to the Post
+  Topics: [TopicInput]
+}
+
+input PostQueryInput {
+  # The Post's slug
+  slug: String
+}
+
+input PostFindInput {
+  # Slug of the topic for the posts
+  topicSlug: String
+  # Offset to display posts
+  offset: Int
+  # limit
+  limit: Int
+}
+
+# Used to search Posts
+input SearchPostsInput {
+  # Cursor for the search
+  offset: Int
+  # The query to search by
+  search: String!
+}
+

@@ -1,0 +1,53 @@
+.adminContainer {
+}
+
+.adminNav {
+  position: fixed;
+  top: 66px;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  background: white;
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.06);
+  color: $slateLight;
+  padding: 24px;
+
+  h5 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $slateLight;
+    margin: 0 0 24px;
+  }
+}
+
+.adminNavItems {
+  margin: 0 0 0 -1px;
+  padding: 0;
+  list-style: none;
+}
+
+.normalItem {
+  display: block;
+  color: $slateLight;
+  font-size: 16px;
+  margin: 0 0 4px;
+
+  &:focus, &:active, &:hover {
+    text-decoration: none;
+    color: $slate;
+  }
+}
+
+.activeItem {
+  color: $blue;
+
+  &:focus, &:active, &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+.adminChildPageContainer {
+  margin: 0 0 0 200px;
+}

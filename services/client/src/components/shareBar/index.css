@@ -1,0 +1,40 @@
+.shareBar {
+  border-radius: 3px;
+  overflow: hidden;
+  background: #222;
+  display: inline-block;
+}
+
+.sm { height: 24px; }
+.md { height: 32px; }
+.lg { height: 54px; }
+
+.shareButton {
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.14s ease-out;
+  transform: scale(1, 1);
+
+  svg {
+    transform: scale(1, 1);
+    transition: all 0.14s ease-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      transform: scale(1.14, 1.14);
+    }
+  }
+}
+
+.btn-sm { height: 24px; width: 24px; }
+.btn-md { height: 32px; width: 32px; }
+.btn-lg { height: 54px; width: 54px; }
+
+.facebook { background: #3b5998; }
+.twitter { background: #00aced; }
+.linkedin { background: #007fb1; }
+

@@ -1,0 +1,74 @@
+.avatar {
+  border-radius: 200px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    z-index: 2;
+  }
+
+  &:after,
+  input,
+  a {
+    content: '';
+    border-radius: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 1px solid rgba(0,0,0,.12);
+  }
+  input,
+  a {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  &:hover {
+    :global .avatar-edit-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.editOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.56);
+  color: white;
+  z-index: 1;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: all .18s ease-out;
+  border-radius: 200px;
+  overflow: hidden;
+
+  i {
+    display: block;
+    font-size: 24px;
+    display: block;
+    font-weight: 400;
+    height: 30px;
+    margin: 8px 0 0 0;
+  }
+
+  span {
+    font-size: 10px;
+  }
+}
+
+.tn { width: 18px; height: 18px; }
+.sm { width: 24px; height: 24px; }
+.md { width: 32px; height: 32px; }
+.lg { width: 50px; height: 50px; }
+.vlg { width: 72px; height: 72px; }
+.huge { width: 120px; height: 120px; }

@@ -1,0 +1,200 @@
+.postRow {
+  position: relative;
+  margin: 0 -10px;
+  padding: 10px 90px 10px 10px;
+  border-radius: 2px;
+
+  h6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: $slateLight;
+    display: inline;
+    margin: 0 8px 0 0;
+    line-height: 19px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $slateLight;
+    opacity: 0.84;
+    display: inline;
+    line-height: 19px;
+  }
+
+  &:hover {
+    background: #f6f6fa;
+    box-shadow: inset 0px 0px 24px rgba(0,0,0,.04);
+
+    :global .property-options {
+      opacity: 1;
+    }
+
+    :global .full-post-preview {
+      opacity: 1 !important;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -24px;
+      bottom: -24px;
+      right: 100%;
+      width: 54px;
+      background: transparent;
+    }
+  }
+}
+
+.previewText {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 42px;
+}
+
+.options {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+
+  a {
+    width: 33px;
+    padding: 5px 0px 0 9px;
+    height: 28px;
+    margin: 0 0 0 4px;
+  }
+
+  :global div.btn-group > a {
+    border-radius: 3px !important;
+    margin: 0 0 0 4px !important;
+  }
+}
+
+.fullPreviewOverlay {
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+.fullPreview {
+  background: $white;
+  pointer-events: auto !important;
+  box-shadow: -4px 0 4px rgba(0,0,0,.07), inset -4px 0 4px rgba(0,0,0,.03) !important;
+  padding: 192px 24px 24px !important;
+  display: block;
+  width: 640px !important;
+  max-width: 640px !important;
+  border-radius: 0 !important;
+  position: fixed !important;
+  right: 481px !important;
+  top: 72px;
+  bottom: 0;
+  background: #FDFDFE;
+  color: $slateLight;
+  text-decoration: none;
+  text-align: left !important;
+  z-index: 30;
+  overflow-y: scroll !important;
+  transition: all 0.18s ease-out;
+
+  @media (min-width: 1606px) {
+    right: calc(56% - 200px) !important;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 26px;
+    color: $slate;
+    display: block;
+    text-align: left;
+    margin: 0 0 24px 0;
+    background: white;
+    padding: 14px 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.04), 0 2px 21px rgba(0,0,0,.06);
+  }
+
+  p {
+    font-size: 14px;
+    color: $slateLight;
+    margin: 0;
+    white-space: pre-line;
+    word-break: break-word;
+    font-weight: 400;
+  }
+
+  @media (max-width: $screenXs) {
+    h4 {
+      font-size: 18px;
+    }
+  }
+}
+
+.postContent {
+  position: relative;
+  z-index: 2;
+  margin: -68px 0 0;
+
+  h1, h2, h3, h5, h6 {
+    font-size: 18px !important;
+    font-weight: bold;
+    text-align: left;
+    margin: 42px 0 18px 0;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 32px 0;
+  }
+
+  p {
+    margin: 0 0 18px;
+    font-size: 16px;
+  }
+
+  ul, li {
+    font-size: 16px;
+  }
+}
+
+.postImage {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  background: #eee;
+  background-size: cover;
+  border-radius: 0;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: white;
+    bottom: -72px;
+    height: 100px;
+    left: -200px;
+    right: -200px;
+    transform: rotate(6deg);
+  }
+}
+
+.readTime {
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0 0;
+  z-index: 4;
+}
+
+.editPostButton {
+  top: 18px;
+  right: 18px;
+  position: absolute;
+  z-index: 3;
+}

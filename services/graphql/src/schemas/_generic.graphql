@@ -1,0 +1,6 @@
+interface Resource {
+  createdAt: Date!
+  updatedAt: Date!
+  destroyedAt: Date
+  destroyed: Boolean!
+}

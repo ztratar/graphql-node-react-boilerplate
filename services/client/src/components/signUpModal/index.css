@@ -1,0 +1,154 @@
+.signUpModal {
+  padding: 20px 42px 42px !important;
+
+  label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: $slateLighter;
+  }
+
+  input {
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 32px 0 0;
+  }
+
+  @media (max-width: $screenXs) {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow-y: scroll !important;
+    border-radius: 0 !important;
+
+    & > a {
+      top: 24px !important;
+      right: 24px !important;
+    }
+  }
+}
+
+.header {
+  font-weight: 300;
+  padding: 24px;
+  border-bottom: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.01), 0 2px 21px 0 rgba(0,0,0,0.05);
+  margin: -20px -42px 22px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.leadGenSignupModal {
+  padding: 42px !important;
+  text-align: left;
+  max-width: 580px !important;
+  padding: 48px !important;
+  background: linear-gradient(284deg, #3c548c, #313e5a) !important;
+  box-shadow: 0 0 24px rgba(60, 84, 161, 0.22) !important;
+
+  h3 {
+    font-size: 32px;
+    display: block;
+    margin: 0 0 24px;
+    font-weight: 200;
+    color: white;
+    text-align: left !important;
+  }
+
+  p {
+    display: block;
+    margin: 0 0 48px !important;
+    font-size: 18px;
+    color: white;
+    text-align: left !important;
+    max-width: 400px !important;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  input {
+    display: inline-block !important;
+    max-width: 280px !important;
+    margin: 0 18px 0 0;
+    vertical-align: top;
+  }
+
+  button {
+    display: inline-block !important;
+    margin: 0 !important;
+    width: 150px !important;
+    height: 52px !important;
+    vertical-align: top;
+  }
+
+  @media (max-width: 564px) {
+    padding: 22px 32px 48px !important;
+    border-radius: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    bottom: 0 !important;
+
+    h3 {
+      font-size: 28px;
+      max-width: 286px;
+      text-align: center !important;
+      margin: 32px auto 24px !important;
+    }
+
+    p {
+      text-align: center !important;
+    }
+
+    input {
+      max-width: 400px !important;
+      width: 100% !important;
+    }
+
+    button {
+      display: block !important;
+      width: 100% !important;
+      margin: 32px 0 0 !important;
+    }
+  }
+}
+
+.leadGenActions {
+  text-align: left;
+}
+
+.submitButton {
+  background: linear-gradient(284deg, #1cc7d0, #2dde98) !important;
+  border-radius: 122px !important;
+}
+
+.formRow {
+  margin: 0 0 8px;
+}
+
+.logo {
+  text-align: left;
+  margin: 0 0 18px;
+
+  svg {
+    width: 164px;
+  }
+}
+
+.phone {
+  display: block !important;
+
+  button {
+    margin: 0 !important;
+  }
+}

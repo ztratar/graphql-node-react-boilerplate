@@ -1,0 +1,24 @@
+.shareSidebarWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  pointer-events: none;
+
+  @media (max-width: $screenSm) {
+    display: none;
+  }
+}
+
+.shareSidebar {
+  width: 54px;
+  height: auto !important;
+  border-radius: 3px 0 0 3px !important;
+  margin-top: 176px;
+}
+
+.shareButton {
+  display: block !important;
+  pointer-events: auto;
+}

@@ -1,0 +1,110 @@
+.switchWrapper {
+  a {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $slateLighter;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 22px;
+  min-width: 44px;
+  line-height: 20px;
+  vertical-align: middle;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s;
+  user-select: none;
+
+  &:after {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+
+    border-radius: 18px;
+    background-color: white;
+    content: " ";
+    cursor: pointer;
+    transition: all 0.3s, width 0.3s;
+  }
+
+  &:active:after {
+    width: 24px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $blueLight;
+    outline: 0;
+  }
+
+  &:focus:hover {
+    box-shadow: none;
+  }
+}
+
+.switchWithText {
+  margin: 0 8px;
+}
+
+.inner {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 24px;
+  margin-right: 6px;
+  display: block;
+}
+
+.checked {
+  border-color: $blue;
+  background-color: $blue;
+
+  &:after {
+    left: 100%;
+    margin-left: -18px;
+  }
+
+  &:active:after {
+    margin-left: -23px;
+  }
+}
+
+.disabledSwitch {
+  a {
+    opacity: 0.5;
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  background: #f4f4f4;
+  border-color: #f4f4f4;
+
+  &:after {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.innerChecked {
+  margin-left: 6px;
+  margin-right: 24px;
+}
+
+.innerDisabled {
+  color: #ccc;
+  opacity: 0.8;
+}

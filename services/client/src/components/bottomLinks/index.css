@@ -1,0 +1,31 @@
+.bottomLinks {
+  a {
+    display: inline-block;
+    margin: 0px 24px 0 0;
+    color: $slateLight;
+    font-size: $textTiny;
+    opacity: 0.84;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(117, 121, 136, 0.4);
+    }
+
+    &:hover {
+      color: $blue;
+      opacity: 0.96;
+      text-decoration: none;
+
+      &:after {
+        background: rgba(117, 121, 136, 0.5);
+        background: $blue;
+      }
+    }
+  }
+}

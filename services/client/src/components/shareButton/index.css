@@ -1,0 +1,79 @@
+.shareButton {
+  position: relative;
+  display: inline-block;
+}
+
+.shareButtonLink {
+}
+
+.shareBarWrapper {
+  transition: all 0.14s ease-out;
+  transform: scale(0.98, 0.98) translate3d(0,-4px,0);
+  position: absolute;
+  top: 100%;
+  padding: 10px 8px 6px;
+  background: #2d2d2d;
+  border-radius: 5px;
+  margin-top: 6px;
+  width: 203px;
+  left: 50%;
+  margin-left: -101px;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -6px;
+    height: 6px;
+    background: transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    margin-top: -4px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #2d2d2d;
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.activeShareBarWrapper {
+  transform: scale(1, 1) translate3d(0,0,0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.shareSidebar {
+  background: transparent !important;
+}
+
+.shareSocialButton {
+  display: inline-block;
+  overflow: hidden;
+  transition: all 0.14s ease-out;
+  transform: scale(1, 1) translate3d(0,0);
+  margin: 0 4px !important;
+  border-radius: 5px !important;
+
+  svg {
+    transform: scale(1, 1);
+    transition: all 0.14s ease-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      transform: scale(1.14, 1.14) translate3d(0,0);
+    }
+  }
+}

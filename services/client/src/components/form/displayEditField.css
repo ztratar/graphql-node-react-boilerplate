@@ -1,0 +1,62 @@
+.displayEditField {
+  display: inline-block;
+  height: 36px;
+
+  h3 {
+    display: inline-block;
+    vertical-align: bottom;
+    color: $slateLight;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  :global a {
+    color: $slateLighter;
+    vertical-align: bottom;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 0 -3px 8px;
+    border: 1px solid transparent;
+
+    i {
+      font-size: 16px;
+      height: 18px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      border: 1px solid $grey;
+      color: $blue;
+      box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    }
+  }
+}
+
+.editForm {
+  position: relative;
+  margin: -6px 0 0;
+
+  button {
+    position: absolute;
+    right: -70px;
+    top: 0;
+    height: 40px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  input {
+    margin: 0;
+    height: 40px !important;
+  }
+}
+
+.lg {
+  h3 {
+    font-size: 24px;
+  }
+
+  :global a {
+    margin: 0 0 0 8px;
+  }
+}

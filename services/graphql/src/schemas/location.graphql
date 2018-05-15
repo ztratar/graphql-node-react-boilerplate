@@ -1,0 +1,47 @@
+# Used to model the Location object
+type Location implements Resource {
+  # Primary key
+  id: ID!
+  # Google's name for the Location
+  googleName: String!
+  # Google's ID for the Location
+  googleId: ID!
+  # Google's Place ID for the Location
+  googlePlaceId: ID!
+  # Google's Timezone ID for the Location
+  googleTimezoneId: ID
+  # Google's Timezone name for the Location
+  googleTimezoneName: String
+  # Google's Timezone DST offset for the Location
+  googleTimezoneDstOffset: Int
+  # Google's Timezone raw offset for the Location
+  googleTimezoneRawOffset: Int
+  # Google's Url<GoogleIcon> for the Location
+  googleIcon: Url
+  # Google's latitude coordinate for the Location
+  googleCoordLat: Float
+  # Google's longitude coordinate for the Location
+  googleCoordLng: Float
+  # Time that the Location was created
+  createdAt: Date!
+  # Time that the Location was last updated
+  updatedAt: Date!
+  # Time that the Location was destroyed
+  destroyedAt: Date
+  # Whether or not the Location has been destroyed
+  destroyed: Boolean!
+}
+
+input LocationSearchInput {
+  # Input string to search for
+  text: String!
+}
+
+input LocationInput {
+  # Primary key (not processed)
+  id: ID
+  # Google's name for the Location (not processed)
+  googleName: String
+  # Google's Place ID for the Location
+  googlePlaceId: ID!
+}

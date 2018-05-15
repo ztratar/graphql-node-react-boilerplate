@@ -1,0 +1,170 @@
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  z-index: 110;
+  background: rgba(243, 244, 247, 0);
+  transition: background .24s ease-in-out;
+
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+}
+
+.overlayActive {
+  background: rgba(243, 244, 247, 0.56);
+}
+
+.overlayWithHeader {
+  top: 72px !important;
+  bottom: 0;
+  height: auto !important;
+  z-index: 97 !important;
+}
+
+.modalWrapper {
+	display: table;
+	height: 100%;
+	width: 100%;
+  padding: 42px 0;
+  pointer-events: none;
+
+	& > * {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.modal {
+  margin: 0 auto;
+  max-width: 520px;
+  display: block;
+  background: white;
+  border-radius: 5px;
+  padding: 42px;
+  opacity: 1;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  transition: all .18s ease-in-out .04s;
+  transform: scale(0.99, 0.99) translate3d(0, 10px, 0);
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.modalActive {
+  opacity: 1;
+  transform: scale(1,1) translate3d(0, 0, 0);
+}
+
+.modalContent {
+  text-align: center;
+
+  h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 24px !important;
+    max-width: 400px;
+    margin: 0 auto 24px;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 18px;
+  }
+
+  ul, li {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  ul, ol { margin: 0 0 18px; }
+
+  li {
+    margin: 0 0 8px;
+  }
+
+  :global .action-row {
+    clear: fix;
+    background: #eff1f5;
+    margin: 42px -42px -42px;
+    padding: 18px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  @media (max-width: $screenXs) {
+    h2 {
+      font-size: 22px !important;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    ul, li {
+      font-size: 15px;
+    }
+  }
+}
+
+.textAlign-center {
+  text-align: center;
+}
+
+.textAlign-left {
+  p, ul, ol, li, blockquote, img {
+    text-align: left;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+}
+
+.close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+  color: white;
+  z-index: 5;
+  transform: scale(1,1);
+  transition: all 0.12 ease-out;
+
+  i {
+    font-size: 24px;
+    margin: 0;
+    color: $slateLight;
+    transform: rotate(45deg);
+    transition: all 0.12 ease-out;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    transform: scale(1.04,1.04);
+
+    i {
+      color: $slate;
+    }
+  }
+}

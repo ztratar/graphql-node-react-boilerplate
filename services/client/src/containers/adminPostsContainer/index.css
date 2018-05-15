@@ -1,0 +1,72 @@
+.adminPostsContainer {
+}
+
+.adminPostsWrapper {
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+.createWrapper {
+  margin: 0 0 42px;
+}
+
+.createNewButton {
+  margin: 0 0 42px;
+  width: 100%;
+}
+
+.searchInput {
+  padding: 0 18px 0 40px !important;
+  display: block;
+  max-width: none !important;
+  height: 46px !important;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.searchInputWrap {
+  position: relative;
+  display: block;
+  margin: 0 0 32px;
+
+  i {
+    position: absolute;
+    color: $slateLight;
+    opacity: 0.8;
+    font-size: 18px;
+    top: 25px;
+    left: 14px;
+  }
+}
+
+.clearSearchButton {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  z-index: 5;
+  cursor: pointer;
+
+  i {
+    font-size: 24px;
+    margin: 0;
+    color: $slateLight;
+    transform: rotate(45deg);
+    transition: all 0.12 ease-out;
+    line-height: 18px !important;
+    top: 10px !important;
+    left: auto !important;
+    right: 3px !important;
+    opacity: 0.5 !important;
+  }
+
+  &:hover {
+    i {
+      color: $slate;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 18px solid rgb(228, 228, 239);
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation-name: loadFade;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.52s;
+  animation-fill-mode: forwards;
+
+  div {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 12px;
+    height: 12px;
+    background: #7594DA;
+    animation: around 1.2s ease infinite;
+
+    &:nth-child(2) {
+      opacity:0.5;
+      animation: around 1.2s ease infinite .01s;
+    }
+    &:nth-child(3) {
+      opacity:0.5;
+      animation: around 1.2s ease infinite .02s;
+    }
+    &:nth-child(4) {
+      opacity:0.5;
+      animation: around 1.2s ease infinite .03s;
+    }
+    &:nth-child(5) {
+      opacity:0.5;
+      animation: around 1.2s ease infinite .04s;
+    }
+  }
+}
+
+@keyframes around {
+  0%, 1%, 99%, 100% {
+    top:-15px;
+    left:-15px;
+  }
+  24%, 26% {
+    top: -15px;
+    left: 37px;
+  }
+  49%, 51% {
+    top: 37px;
+    left: 37px;
+  }
+  74%, 76% {
+    top: 37px;
+    left: -15px;
+  }
+}
+
+.loaderWrap {
+  text-align: center;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.withPadding {
+  padding: 32px 0;
+}
+
+.pageLoader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: 0;
+}
+
+.pageLoaderWithOffset {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: 35px;
+  margin-top: 0;
+}
+
+.smallLoader {
+  width: 26px;
+  height: 26px;
+  border: 6px solid rgb(228, 228, 239);
+  position: relative;
+  display: inline-block;
+
+  div {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 4px;
+    height: 4px;
+    background: #7594DA;
+    animation: smallAround 1.2s ease infinite;
+
+    &:nth-child(2) {
+      opacity:0.5;
+      animation: smallAround 1.2s ease infinite .01s;
+    }
+    &:nth-child(3) {
+      opacity:0.5;
+      animation: smallAround 1.2s ease infinite .02s;
+    }
+    &:nth-child(4) {
+      opacity:0.5;
+      animation: smallAround 1.2s ease infinite .03s;
+    }
+    &:nth-child(5) {
+      opacity:0.5;
+      animation: smallAround 1.2s ease infinite .04s;
+    }
+  }
+}
+
+@keyframes smallAround {
+  0%, 1%, 99%, 100% {
+    top:-5px;
+    left:-5px;
+  }
+  24%, 26% {
+    top: -5px;
+    left: 15px;
+  }
+  49%, 51% {
+    top: 15px;
+    left: 15px;
+  }
+  74%, 76% {
+    top: 15px;
+    left: -5px;
+  }
+}
+
+@keyframes loadFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

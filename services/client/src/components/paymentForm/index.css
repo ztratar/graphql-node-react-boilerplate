@@ -1,0 +1,116 @@
+:global {
+  .jp-card {
+    .jp-card-front {
+      z-index: 2 !important;
+    }
+    .jp-card-back {
+      z-index: 3 !important;
+    }
+  }
+}
+
+.root {
+  position: relative;
+  max-width: 742px;
+  margin: 42px auto;
+  padding-bottom: 42px;
+  animation: fadeInAndUp ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.42s;
+  animation-delay: 0.36s;
+  opacity: 0;
+}
+
+.cardWrapper {
+  width: 350px;
+  height: 200px;
+  margin: 0 42px 0 0;
+  display: inline-block;
+  vertical-align: top;
+
+  @media (max-width: $screenSm) {
+    margin: 0 auto 42px;
+    display: block;
+  }
+
+  @media (max-width: $screenXs) {
+    display: none;
+  }
+}
+
+.cardWrapperWithBg {
+  background: url('../../assets/images/creditCard.png');
+}
+
+.wrapper {
+  margin: 0;
+  width: 350px !important;
+  padding: 0 !important;
+  display: inline-block;
+  vertical-align: top;
+
+  @media (max-width: $screenSm) {
+    margin: 0 auto;
+    display: block;
+    width: auto !important;
+  }
+
+  :global .row {
+    margin: 0 -7px;
+  }
+}
+
+.formContainer {
+  padding: 0 7px !important;
+}
+
+.input {
+  font-size: 16px !important;
+  border-radius: 5px !important;
+  margin-bottom: 22px !important;
+  background: #fbfbfc;
+  max-width: 360px !important;
+  box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.08);
+  border: 1px solid #dbdde4;
+  height: 52px;
+  padding: 18px;
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.13) !important;
+    border-color: #96b5f9 !important;
+  }
+}
+
+.button {
+  width: 100%;
+  position: absolute !important;
+  bottom: -32px;
+  max-width: 370px;
+  left: 50%;
+  margin-left: -185px;
+
+  @media (max-width: $screenXs) {
+    left: 0;
+    max-width: auto;
+    margin-left: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeInAndUp {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}

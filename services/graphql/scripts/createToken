@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+require('babel-register');
+require('babel-polyfill');!
+require('source-map-support').install({
+  environment: 'node'
+});
+
+const argv = require('yargs').argv;
+
+const objectToToken = require('../src/lib/crypto').objectToToken;
+
+const secret = argv.secret;
+const id = argv.id;
+
+if (!id) {
+  process.stderr.write('Error: --id flag must be provided');
+  process.exit(1);
+}
+
+if (!secret) {
+  process.stderr.write('Error: --secret flag must be provided');
+  process.exit(1);
+}
+
+objectToToken({
+  id: id
+}, secret)
+.then(token => {
+  process.stdout.write(`${token}\n`);
+  process.exit(0);
+})
+.catch(e => {
+  process.stderr.write(`Error: ${e.message}`);
+  process.exit(1)
+});

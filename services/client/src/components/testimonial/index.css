@@ -1,0 +1,61 @@
+.testimonial {
+  margin: 0 auto;
+  max-width:  348px;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    color: $slateLight;
+    line-height: 21px;
+    background-image: url('../../assets/images/fadedDownArrowBreak.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding: 0 0 48px;
+    margin: 0;
+  }
+
+  :global .imgWrap {
+    border-radius: 150px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin: 32px auto 24px;
+
+    &:before {
+      content: '';
+      border: 1px solid black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 200px;
+      z-index: 3;
+      border-top-color: rgba(0,0,0,0.6);
+      opacity: 0.14;
+    }
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    background: $blueDark;
+  }
+
+  h4 {
+    font-size: 24px;
+    color: $slate;
+    margin: 24px 0 8px;
+  }
+
+  h5 {
+    font-size: 14px;
+    opacity: 0.8;
+    font-weight: 300;
+    color: $slateLight;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}

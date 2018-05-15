@@ -1,0 +1,69 @@
+.topicPostsContainer {
+  margin: -38px 0 0;
+}
+
+.publicTopicPostsContainer {
+}
+
+.postsOuterWrapper {
+  max-width: 1200px;
+  margin: 42px auto 82px;
+  padding: 0 18px;
+}
+
+.publicPostsOuterWrapper {
+  margin: 32px auto 48px;
+}
+
+.header {
+  background: white;
+  text-align: center;
+  padding: 64px 24px;
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.04);
+
+  h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  @media (max-width: $screenSm) {
+    padding: 112px 24px 84px;
+
+    h1 {
+      font-size: 22px;
+    }
+  }
+}
+
+.publicHeader {
+  padding: 184px 24px 64px;
+}
+
+.postsWrapper {
+  text-align: center;
+  font-size: 0;
+
+  a {
+    width: 29.4% !important;
+    display: inline-block !important;
+    margin: 0 1.75% 32px;
+    vertical-align: top;
+    font-size: 16px;
+
+    @media (max-width: $screenSm) {
+      width: 46% !important;
+      margin: 0 2% 32px !important;
+    }
+
+    @media (max-width: 640px) {
+      width: 100% !important;
+      margin: 0 0 32px !important;
+    }
+  }
+}

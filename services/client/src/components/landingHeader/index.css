@@ -1,0 +1,384 @@
+.landingHeader {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: $spaceLarge 0;
+  background: rgba(255,255,255,0);
+  transition: all 0.24s ease-out;
+  z-index: 110;
+
+  :global .container { position: relative; }
+
+  :global .navbar-toggle {
+    margin-right: 0;
+  }
+
+  @media (max-width: $screenMd) {
+    svg {
+      width: 192px;
+    }
+  }
+
+  @media (max-width: $screenSm) {
+    padding: 12px 18px 12px 24px;
+
+    svg {
+      width: 158px !important;
+    }
+
+    :global .navbar-collapse {
+      margin-top: 24px;
+      background: rgba(249, 249, 249, 0.96);
+      box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.05), 0px 1px 4px 0px rgba(0,0,0,0.12);
+      margin: 4px -40px -14px;
+      border-top: 1px solid #e6e6e6;
+      box-shadow: none;
+      padding: 24px 0;
+    }
+  }
+
+  ul {
+    float: right;
+    margin: 0 -15px 0 0;
+
+    li {
+      margin: 0 0 0 $spaceHuge;
+
+      @media (max-width: 991px) {
+        margin: 0 0 0 32px;
+      }
+
+      a {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $slateLight;
+        opacity: 0.94;
+        position: relative;
+        padding: 15px 0;
+        transition: color 0.18s ease-out;
+
+        @media (max-width: 991px) {
+          padding: 19px 0;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 6px;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: $slateLighter;
+          opacity: 0;
+          transition: all 0.12s ease-out;
+        }
+
+        &:hover {
+          text-decoration: none;
+          background: none;
+          opacity: 1;
+
+          &:after {
+            opacity: 0.6;
+          }
+        }
+
+        &:focus {
+          background: transparent;
+          outline: none;
+        }
+      }
+    }
+
+    @media (max-width: $screenSm) {
+      width: 100%;
+      float: none;
+
+      li {
+        display: block;
+
+        a {
+          display: block;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  :global ul li.active a:after {
+    opacity: 0.6;
+  }
+
+  :global .icon-bar {
+    background: $slateLight;
+    transition: background 0.18s ease-out;
+  }
+
+  :global svg {
+    width: 203px;
+    transition: all 0.24s ease-out;
+    margin-top: 0;
+  }
+}
+
+.lightLandingHeader {
+  ul {
+    li {
+      a {
+        color: white;
+        opacity: 0.94;
+      }
+    }
+  }
+
+  @media (max-width: $screenSm) {
+    :global .navbar-collapse {
+      background: rgba(0, 0, 0, 0.82);
+      color: white;
+      box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.05), 0px 1px 4px 0px rgba(0,0,0,0.12);
+      border-top: 1px solid rgba(0,0,0,.18);
+    }
+  }
+
+  :global .icon-bar {
+    background: white;
+  }
+}
+
+.scrollActive {
+  top: 0;
+  padding: 12px 0 8px;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+  box-shadow: 0 2px 4px rgba(0,0,0,.03), 0 2px 21px rgba(0,0,0,.03);
+  background: white;
+
+  :global svg {
+    width: 168px;
+    height: 46px;
+  }
+
+  @media (max-width: $screenMd) {
+    padding: 8px 0;
+
+    svg {
+      width: 168px;
+      margin-top: 4px;
+    }
+  }
+
+  @media (max-width: $screenSm) {
+    padding: 4px 8px 3px 14px;
+
+    svg {
+      width: 158px;
+      margin-top: 4px;
+    }
+
+    :global .navbar-toggle {
+      margin-top: 11px;
+    }
+  }
+}
+
+.applyButtonWrap {
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  top: 13px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  transform: scale(.96,0.96);
+
+  a {
+    z-index: 10;
+  }
+
+  span {
+    z-index: 4;
+  }
+
+  @media (max-width: $screenMd) {
+    transform: scale(.85,0.85);
+  }
+
+  @media (max-width: $screenXs) {
+    display: none;
+  }
+}
+
+.applyButtonWrapActive {
+  top: 4px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1,1);
+
+  @media (max-width: $screenMd) {
+    top: 8px;
+    transform: scale(.9,0.9);
+  }
+}
+
+.applyButtonWrapShake {
+  animation: shake 0.9s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.signupVisible {
+
+}
+
+.phoneNumber {
+  font-size: 18px;
+  position: absolute;
+  top: 11px;
+  right: 153px;
+  color: $slateLight;
+
+  i {
+    font-size: 22px;
+    vertical-align: top;
+    margin: 14px;
+    color: #4a65a2;
+  }
+
+  @media (max-width: $screenMd) {
+    top: 16px;
+    right: 136px;
+  }
+
+  @media (max-width: $screenSm) {
+    display: none;
+  }
+}
+
+.logInButton {
+  @media (min-width: $screenSm) {
+    text-transform: uppercase;
+    background: #11D79D;
+    color: rgba(255,255,255,.94) !important;
+    font-weight: 400;
+    border: none;
+    font-size: 15px;
+    padding: 10px 22px !important;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transform: translate3d(0,8px,0) scale(0.98, 0.98);
+    transition: all 0.32s ease-in-out;
+    vertical-align: top !important;
+    position: static;
+    margin: -4px 0 0 0;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      background: color($green lightness(+3%)) !important;
+      color: rgba(255,255,255,.94) !important;
+      text-decoration: none;
+    }
+
+    &:active {
+      outline: none;
+      text-decoration: none;
+      color: rgba(255,255,255,.94);
+    }
+
+    &:focus {
+      outline: none;
+      text-decoration: none;
+      color: rgba(255,255,255,.94);
+    }
+  }
+
+  @media (max-width: $screenMd) {
+    margin: -1px 0 0 0;
+  }
+}
+
+.startFreeTrialButton {
+  position: absolute !important;
+  top: 3px;
+  width: 172px;
+  left: 50%;
+  margin-left: -86px;
+  opacity: 0;
+  text-transform: uppercase;
+  background: #11D79D;
+  color: rgba(255,255,255,.94);
+  font-weight: 400;
+  border: none;
+  font-size: 15px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transform: translate3d(0,8px,0) scale(0.98, 0.98);
+  transition: all 0.32s ease-in-out;
+
+  &:hover {
+    background: color($green lightness(+3%));
+    color: rgba(255,255,255,.94);
+    text-decoration: none;
+  }
+
+  &:active {
+    outline: none;
+    text-decoration: none;
+    color: rgba(255,255,255,.94);
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    color: rgba(255,255,255,.94);
+  }
+
+  @media (max-width: $screenMd) {
+    display: none;
+  }
+}
+
+.startFreeTrialButtonShown {
+  opacity: 1;
+  transform: translate3d(0,0,0) scale(1,1);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(4px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-8px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(8px, 0, 0);
+  }
+}

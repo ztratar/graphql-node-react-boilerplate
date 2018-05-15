@@ -1,0 +1,20 @@
+.logo {
+  width: 238px;
+  height: 55px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0;
+
+  path {
+    transition: all 0.24s ease-out;
+  }
+
+  @media (max-width: @screen-sm) {
+    width: 145px;
+    height: 34px;
+  }
+}
+
+.lightLogo {
+  path { fill: #fff; }
+}

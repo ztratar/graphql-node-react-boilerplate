@@ -1,0 +1,100 @@
+/*
+ * Button sizes
+ */
+.size-sm {
+  font-size: $textTiny;
+}
+
+.size-md {
+  font-size: $textSmall;
+}
+
+.size-lg {
+  font-size: $textBase;
+}
+
+.size-vlg {
+  font-size: $textBase;
+}
+
+/*
+ * Default class
+ */
+.tagRadioRow {
+  font-weight: 400;
+  border: none;
+  color: $slateLight;
+  position: relative;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+
+  label {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    direction: initial;
+    white-space: inherit;
+    vertical-align: top;
+
+    input {
+      margin: 0 !important;
+      position: static !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.tagContent {
+  min-width: 210px;
+  text-align: left !important;
+  padding-left: 0 !important;
+
+  span {
+    max-width: 180px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 400px) {
+    min-width: 160px;
+  }
+}
+
+.cancel {
+  display: inline-block;
+  vertical-align: top;
+  opacity: 0.4;
+  height: 18px;
+  width: 18px;
+  margin: 3px 0 0 8px;
+
+  i {
+    font-size: 20px;
+    margin: -4px 0 0 0;
+    transform: rotate(45deg);
+    color: $slateLighter;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cancel-sm {
+  width: 16px;
+  margin: 0 0 0 6px;
+
+  i {
+    font-size: 16px;
+    margin: -7px 0 0 0;
+  }
+}
+
+.cancel-lg {
+  height: 22px;
+}
+
+.cancel-vlg {
+  height: 22px;
+}

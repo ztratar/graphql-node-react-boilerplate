@@ -1,0 +1,6 @@
+type Subscription {
+  # Used to subscribe to a given User (admin only)
+  userSubscription (
+    input: UserSubscriptionInput!
+  ): User
+}

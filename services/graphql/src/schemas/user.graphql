@@ -1,0 +1,207 @@
+# Used to model a User object
+type User implements Resource {
+  # Primary key
+  id: ID!
+  # The User's name
+  name: String
+  # The User's email
+  email: String!
+  # The User's phone number
+  phoneNumber: PhoneNumber
+  # Whether or not the User is subscribed to emails
+  emailSubscribed: Boolean!
+  # Whether or not the User is subscribed to Message notifications via SMS
+  smsSubscribed: Boolean!
+  # Whether or not the User is an Admin
+  isAdmin: Boolean!
+  # Whether or not the User has completed signup
+  signupComplete: Boolean!
+  # The User's selected payment plan
+  selectedPlan: String
+  # The last 4 digits of the users credit card
+  stripeCardLast4: Int
+  # Whether or not the User has connected billing information
+  hasConnectedBilling: Boolean
+  # Whether or not the User has invalid billing information specified
+  hasInvalidBilling: Boolean
+  # Time that the User was created
+  createdAt: Date!
+  # Time that the User was last updated
+  updatedAt: Date!
+  # Time that the User was destroyed
+  destroyedAt: Date
+  # Whether or not the User has been destroyed
+  destroyed: Boolean!
+
+  # Token presented after signup or login
+  token: String
+
+  # The Stripe charges attached to the User
+  Transactions: [UserTransaction]!
+  # The Current Location of the User
+  CurrentLocation: Location
+  # The Avatar of the User
+  Avatar: File
+  # The user's cohort
+}
+
+# Models a Stripe charge for a User
+type UserTransaction {
+  # The primary key of the transaction
+  id: String!
+  amount: Int!
+  paid: Boolean
+  status: String
+  createdAt: Date!
+  cardLast4: String
+  cardExpMonth: String
+  cardExpYear: String
+}
+
+# Used to have base user input
+input UserInput {
+  # The primary key of a User
+  id: ID!
+}
+
+# User search
+input UserSearchInput {
+  query: String!
+  offset: Int
+}
+
+# Used to begin signup for a User
+input UserSignupInput {
+  # The User's email
+  email: Email
+  # The UTM source for the signup
+  utmSource: String
+  # The UTM medium for the signup
+  utmMedium: String
+  # The UTM campaign for the signup
+  utmCampaign: String
+  # The UTM content for the signup
+  utmContent: String
+}
+
+# Used to complete signup for a User
+input UserCompleteSignupInput {
+  # The User's email
+  email: Email!
+  # The User's name
+  name: String
+  # The User's password
+  password: Password!
+  # phone number
+  phoneNumber: PhoneNumber
+}
+
+# Used to login a User
+input UserLoginInput {
+  # The User's email
+  email: Email
+  # The User's password
+  password: String
+}
+
+# Used to apply a coupon to user's subscription
+input UserAddCouponInput {
+  # The coupon code to add
+  couponCode: String
+}
+
+# Used to update a User's billing method
+input UserUpdateBillingInput {
+  # Name on the User's card
+  stripeCardName: String
+  # Number on the User's card
+  stripeCardNumber: CreditCardNumber
+  # Expiration date on the User's card
+  stripeCardExp: CreditCardExpirationDate
+  # CVC code on the User's card
+  stripeCardCVC: CreditCardCVC
+  # Coupon code
+  couponCode: String
+}
+
+# Used to update a User's selected plan
+input UserUpdatePlanInput {
+  # The User's selected plan
+  selectedPlan: String
+}
+
+# Used to change a User's password
+input UserChangePasswordInput {
+  # The User's new password
+  password: Password!
+  # Optional token to look up user for forgot password flow
+  token: String
+}
+
+# Used to send a forgot password email for a user
+input UserForgotPasswordInput {
+  # The User's email address
+  email: Email!
+}
+
+# Used to change a User's password
+input UserLoggedChangePasswordInput {
+  # The User's old password
+  oldPassword: Password!
+  # The User's new password
+  newPassword: Password!
+}
+
+# Used to spoof a User (admin only)
+input UserSpoofInput {
+  # The email address of the User to spoof
+  email: Email
+}
+
+# Used for subscribing to a User
+input UserSubscriptionInput {
+  # The primary key of a User
+  UserId: ID
+}
+
+# Used to update the current User's profile
+input UserUpdateMyProfileInput {
+  # The User's name
+  name: String
+  # The User's email
+  email: Email
+  # The User's phone number
+  phoneNumber: PhoneNumber
+
+  # The User's Avatar
+  Avatar: FileInput
+  # The User's current Location
+  CurrentLocation: LocationInput
+}
+
+# Used to update the current User's settings
+input UserUpdateMySettingsInput {
+  # Whether or not the User wants to be subscribed to emails
+  emailSubscribed: Boolean!
+  # Whether or not the User wants to be subscribed to SMS
+  smsSubscribed: Boolean
+}
+
+# Used to enable SMS for a given user
+input UserEnableSMSInput {
+  phoneNumber: PhoneNumber
+}
+
+# Used to exchange a redirect token for a proper token
+input UserExchangeRedirectTokenInput {
+  # The redirect token to exchange
+  redirectToken: String
+}
+
+input UserUpdateIntroCallStatusInput {
+  introCallStatus: String
+}
+
+input UserUpdatePracticeCallStatusInput {
+  practiceCallStatus: String
+}

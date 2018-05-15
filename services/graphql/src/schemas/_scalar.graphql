@@ -1,0 +1,10 @@
+scalar Date
+scalar Email
+scalar Password
+scalar Url
+scalar CDNKey
+scalar CreditCardNumber
+scalar CreditCardExpirationDate
+scalar CreditCardCVC
+scalar PhoneNumber
+scalar JSON

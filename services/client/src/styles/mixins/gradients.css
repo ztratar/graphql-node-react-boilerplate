@@ -1,0 +1,67 @@
+/*
+ * Gradients
+ */
+
+/*
+ * Horizontal gradient, from left to right
+ *
+ * Creates two color stops, start and end, by specifying a color and position for each color stop.
+ * Color stops are not available in IE9 and below.
+ */
+@define-mixin gradientHorizontal $startColor, $endColor, $startPercent: 0%, $endPercent: 100% {
+  background-image: -webkit-linear-gradient(left, $startColor $startPercent, $endColor $endPercent);
+  background-image: -o-linear-gradient(left, $startColor $startPercent, $endColor $endPercent);
+  background-image: linear-gradient(to right, $startColor $startPercent, $endColor $endPercent);
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb($startColor),argb($endColor)));
+}
+
+/*
+ * Vertical gradient, from top to bottom
+ *
+ * Creates two color stops, start and end, by specifying a color and position for each color stop.
+ * Color stops are not available in IE9 and below.
+ */
+
+@define-mixin gradientVertical $startColor: #555, $endColor: #333, $startPercent: 0%, $endPercent: 100% {
+  background-image: -webkit-linear-gradient(top, $startColor $startPercent, $endColor $endPercent);
+  background-image: -o-linear-gradient(top, $startColor $startPercent, $endColor $endPercent);
+  background-image: linear-gradient(to bottom, $startColor $startPercent, $endColor $endPercent);
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb($startColor),argb($endColor)));
+}
+
+@define-mixin gradientDirectional $startColor: #555, $endColor: #333, $deg: 45deg {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $startColor, $endColor);
+  background-image: -o-linear-gradient($deg, $startColor, $endColor);
+  background-image: linear-gradient($deg, $startColor, $endColor);
+}
+
+@define-mixin gradientHorizontalThree $startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f {
+  background-image: -webkit-linear-gradient(left, $startColor, $midColor $colorStop, $endColor);
+  background-image: -o-linear-gradient(left, $startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient(to right, $startColor, $midColor $colorStop, $endColor);
+  background-repeat: no-repeat;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb($startColor),argb($endColor)));
+}
+
+@define-mixin gradientVerticalThree $startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f {
+  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-repeat: no-repeat;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb($startColor),argb($endColor)));
+}
+
+@define-mixin gradientRadial $innerColor: #555, $outerColor: #333 {
+  background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
+  background-image: radial-gradient(circle, $innerColor, $outerColor);
+  background-repeat: no-repeat;
+}
+
+@define-mixin gradientStriped $color: rgba(255,255,255,.15), $angle: 45deg {
+  background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}

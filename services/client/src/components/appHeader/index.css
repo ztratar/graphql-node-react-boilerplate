@@ -1,0 +1,346 @@
+.appHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $greyBlueLight;
+  background: #fdfdfe;
+  height: 72px;
+  z-index: 98;
+  box-shadow: 0 1px 4px rgba(0,0,0,.03), 0 2px 21px rgba(0,0,0,.05);
+
+  @media (max-width: $screenSm) {
+    height: 60px;
+  }
+}
+
+.scrollActive {
+}
+
+.logo {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+
+  svg {
+    width: 160px;
+    height: 40px;
+  }
+
+  @media (max-width: $screenSm) {
+    left: 12px;
+    top: 10px;
+
+    svg {
+      width: 140px;
+    }
+  }
+}
+
+
+.navigationItems {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  max-width: 1020px;
+  text-align: center;
+  overflow: hidden;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+
+    a {
+    }
+  }
+
+  @media (max-width: $screenSm) {
+    margin: 18px auto 0;
+  }
+}
+
+.normalItem {
+  color: $slateLight;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 10px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  opacity: 0.84;
+  transition: all 0.12s ease-out;
+
+  height: 72px;
+  border-radius: 0;
+  padding: 25px 32px 13px;
+
+  i {
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 21px;
+    margin: -1px 14px 0 0;
+  }
+
+  svg {
+    vertical-align: top;
+    margin: -5px 14px 0 0;
+    width: 20px;
+    display: inline-block;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: $slate;
+  }
+
+  h5 {
+    color: $slateLight;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 8px 0 6px;
+    display: inline-block;
+    max-width: 66px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: $screenMd) {
+    padding: 25px 24px 13px;
+    margin: 0 6px;
+  }
+
+  @media (max-width: $screenSm) {
+    padding: 20px 24px 18px;
+    border-radius: 5px;
+    height: 60px;
+    margin: 0 18px 8px;
+  }
+}
+
+.avatar {
+  float: left;
+  margin-right: 14px;
+  width: 24px !important;
+  height: 24px !important;
+
+  img {
+    background: white;
+    width: 24px;
+    height: 24px;
+    vertical-align: top !important;
+  }
+
+  @media (max-width: $screenSm) {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+}
+
+.activeItem {
+  background: white;
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.06);
+  opacity: 1;
+  color: $blue;
+  border-bottom: 2px solid $blue;
+  font-weight: 400 !important;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  &:hover, &:active, &:focus {
+    color: $blue;
+  }
+
+  @media (max-width: $screenSm) {
+    border-bottom: 2px solid transparent;
+  }
+}
+
+.navBar {
+  @media (max-width: $screenSm) {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $greyBlueLight;
+    overflow-y: scroll;
+
+    li {
+      display: block;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+.openNavBar {
+  display: block !important;
+}
+
+.secondaryNav {
+  position: absolute;
+  top: 72px;
+  right: 20px;
+  padding: 18px;
+  background: white;
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.06);
+  border-radius: 5px;
+  width: 200px;
+  opacity: 0;
+  transition: all 0.24s ease-out;
+  pointer-events: none;
+  transform: translate3d(0, -8px, 0);
+  color: transparent;
+}
+
+.openSecondaryNav {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0);
+}
+
+.secondaryNavItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    margin: 2px 0;
+
+    a {
+      padding: 6px 8px;
+      text-align: center;
+      color: $slate;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+        text-decoration: none;
+        background: #f6f6f9;
+      }
+    }
+  }
+}
+
+.menuIcon {
+  position: absolute;
+  background: white;
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.06);
+  border-radius: 5px;
+  padding: 18px 14px 0 16px;
+  height: 52px;
+  top: 10px;
+  right: 18px;
+
+  &:hover {
+    background: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: $screenSm) {
+    display: block;
+    height: 44px;
+    top: 8px;
+    right: 8px;
+    padding: 15px 14px 0 15px;
+  }
+
+  svg {
+    width: 18px;
+    opacity: 0.84;
+
+    path {
+      fill: $slateLight;
+    }
+  }
+
+  i {
+    font-size: 16px;
+    color: $slateLight;
+  }
+}
+
+.betaTag {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  color: #3b3d42;
+  opacity: .7;
+  top: 32px;
+  left: 192px;
+
+  @media (max-width: $screenSm) {
+    display: none;
+  }
+}
+
+
+.profileItem {
+  position: absolute;
+  top: 0px;
+  right: 78px;
+  max-width: 225px;
+  padding: 19px 30px;
+  height: 72px;
+  margin: 0;
+  opacity: 0.92;
+
+  :global .media {
+    float: right;
+    height: 32px;
+
+    :global .media-body {
+      display: inline;
+
+      h5 {
+        font-weight: 300;
+      }
+    }
+  }
+
+  @media (max-width: $screenMd) {
+    display: none;
+  }
+}
+
+.avatar {
+  float: left;
+  margin-right: 14px;
+  width: 28px !important;
+  height: 28px !important;
+  margin-top: 3px;
+
+  img {
+    background: white;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@keyframes navPageLoadAnimateDown {
+  0% {
+    transform: translate3d(0,-72px,0);
+  }
+
+  70% {
+    transform: translate3d(0,4px,0);
+  }
+
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}

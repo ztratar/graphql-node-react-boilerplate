@@ -1,0 +1,51 @@
+.textModal {
+  padding: 52px 42px 42px !important;
+
+  p {
+    margin-bottom: 32px !important;
+  }
+
+  a {
+    text-decoration: underline;
+    opacity: 0.72;
+  }
+}
+
+.textSaveButton {
+  display: block;
+  margin: 32px auto;
+  width: 180px;
+}
+
+.textemoji {
+  font-size: 48px;
+  text-align: center;
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 8px;
+  border-radius: 100px;
+  box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(0,0,0,0.06);
+  background: white;
+  margin: -72px auto 18px;
+}
+
+.buttons {
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.iosButton {
+  vertical-align: top;
+  display: inline-block;
+  margin: 10px 8px 0;
+}
+
+.androidButton {
+  vertical-align: top;
+  display: inline-block;
+
+  img {
+    width: 154px;
+  }
+}

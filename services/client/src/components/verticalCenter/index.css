@@ -1,0 +1,10 @@
+.verticalCenter {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.verticalCenterContent {
+  display: table-cell;
+  vertical-align: middle;
+}

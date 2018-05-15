@@ -1,0 +1,390 @@
+/*
+ * Button sizes
+ */
+.tn {
+  font-size: $textTiny;
+  padding: 6px 18px;
+  border-radius: 3px;
+
+  :global i {
+    font-size: $textTiny;
+    height: 5px;
+    margin: -7px 8px 0 0;
+  }
+
+  :global i.right {
+    height: 14px;
+    margin: -5px 0 0 12px !important;
+  }
+
+  &:after {
+    border-radius: 3px;
+  }
+}
+
+.sm {
+  font-size: 15px;
+  padding: 10px 22px;
+  border-radius: 3px;
+
+  :global i {
+    font-size: $textSmall;
+    height: 5px;
+    margin: -3px 10px 0 0;
+  }
+
+  :global i.right {
+    margin-top: -4px !important;
+  }
+
+  &:after {
+    border-radius: 3px;
+  }
+}
+
+.md {
+  font-size: $textSmall;
+  padding: 14px 28px;
+  border-radius: 5px;
+  height: 50px;
+
+  :global i {
+    font-size: $textBase;
+    margin: -3px 12px 0 0;
+    height: 5px;
+  }
+
+  :global i.right {
+    margin-top: -4px !important;
+  }
+
+  &:after {
+    border-radius: 5px;
+  }
+}
+
+.lg {
+  font-size: $textBase;
+  padding: 14px 32px;
+  border-radius: 5px;
+
+  :global i {
+    font-size: $textBase;
+    margin: -3px 12px 0 0;
+    height: 5px;
+  }
+
+  &:after {
+    border-radius: 5px;
+  }
+}
+
+.vlg {
+  font-size: $textBase;
+  padding: 18px 36px;
+  border-radius: 5px;
+
+  :global i {
+    font-size: $textBig;
+    margin: 1px 18px 0 0;
+    height: 5px;
+  }
+
+  &:after {
+    border-radius: 5px;
+  }
+}
+
+.full {
+  width: 100%;
+}
+
+/*
+ * Default class
+ */
+.default {
+  composes: btn from '../../styles/bootstrap.css';
+  font-weight: bold;
+  border: none;
+  color: $slateLight;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  outline: none !important;
+
+  &:hover {
+    color: $slate;
+    box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 2px 21px rgba(0,0,0,.03);
+    transition: all 0.08s ease-out);
+
+    :global .btn-tooltip {
+      opacity: 1;
+    }
+  }
+
+  :global i.right {
+    float: right;
+    margin: -3px 0 0 12px;
+  }
+
+  &:disabled,
+  &[disabled='disabled'] {
+    background: $slateLight !important;
+    border-color: $slateLight !important;
+
+    &:hover {
+      background: $slateLight !important;
+      border-color: $slateLight !important;
+    }
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.bounceHit {
+  opacity: 1 !important;
+  animation-name: bounceHit !important;
+  animation-iteration-count: 1 !important;
+  animation-timing-function: ease-out !important;
+  animation-duration: 0.16s !important;
+  animation-delay: 0s !important;
+}
+
+.lightBtnText {
+  color: rgba(255,255,255,.94);
+
+  &:hover, &:focus {
+    color: white;
+  }
+}
+
+.overlayedBorder {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    font-size: 0;
+  }
+
+  &:hover:after {
+    border-bottom: 1px solid rgba(0,0,0,.13);
+  }
+}
+
+/*
+ * Button Backgrounds
+ */
+.gradientLight {
+  @mixin gradientVertical #fff, $greyLightest;
+  composes: overlayedBorder;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.gradientDark {
+  @mixin gradientVertical $slateLight, $slate;
+  composes: lightBtnText;
+  composes: overlayedBorder;
+}
+
+.gradientBlue {
+  @mixin gradientVertical $blueDark, $blue;
+  composes: lightBtnText;
+  composes: overlayedBorder;
+
+  &:hover {
+    background: $blueDark;
+  }
+}
+
+.gradientGreen {
+  @mixin gradientVertical $green, $greenDark;
+  composes: lightBtnText;
+  composes: overlayedBorder;
+}
+
+.clear {
+  background: transparent;
+  border: none;
+}
+
+.light {
+  background: $white;
+  composes: overlayedBorder;
+}
+
+.dark {
+  composes: lightBtnText;
+  composes: overlayedBorder;
+  background: $slateLight;
+
+  &:hover {
+    background: color($slate lightness(+3%));
+  }
+
+  &:active,
+  &.active {
+    background: color($slate lightness(+3%));
+  }
+}
+
+.blue {
+  composes: lightBtnText;
+  composes: overlayedBorder;
+  background: $blue;
+
+  &:hover {
+    background: color($blue lightness(+3%));
+  }
+}
+
+.green {
+  composes: lightBtnText;
+  composes: overlayedBorder;
+  background: $green;
+
+  &:hover {
+    background: color($green lightness(+3%));
+  }
+}
+
+.red {
+  composes: lightBtnText;
+  composes: overlayedBorder;
+  background: $red;
+
+  &:hover {
+    background: color($red lightness(+3%));
+  }
+}
+
+.orange {
+  composes: lightBtnText;
+  composes: overlayedBorder;
+  background: $orange;
+
+  &:hover {
+    background: color($orange lightness(+3%));
+  }
+}
+
+.grey {
+  background: #ddd;
+
+  &:hover {
+    background: color(#ddd lightness(-3%));
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  min-height: 39px;
+  top: 50%;
+  margin-top: -20px;
+  right: -214px;
+  width: 200px;
+  background: rgba(32, 36, 45, 1);
+  border-radius: 5px;
+  padding: 10px 14px;
+  pointer-events: none;
+  transition: all 0.18s ease-out;
+  color: white !important;
+  font-size: 14px;
+  white-space: normal;
+  text-align: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid $slate;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    z-index: 310;
+  }
+}
+
+.loader {
+  border-radius: 50%;
+  width: 16px;
+  display: inline-block;
+  height: 16px;
+  margin: 3px 12px 0 0;
+  font-size: 3px;
+  position: relative;
+  float: left;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  transform: translate3d(0, 0, 0);
+  animation: load8 1.1s infinite linear;
+
+  &:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+  }
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounceHit {
+  0% {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(0.95, 0.95);
+  }
+
+  70% {
+    transform: scale(1.01, 1.01);
+  }
+
+  100% {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,78 @@
+.customerProfileContainer {
+}
+
+.navBarWrapper {
+  margin: 0 auto 32px;
+  max-width: 280px;
+}
+
+.navbar {
+  border-radius: 5px;
+}
+
+.box {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  padding: 42px;
+
+  input {
+    width: 100%;
+    max-width: none;
+  }
+
+  h3 {
+    margin: -2px 0 32px;
+    font-size: 20px;
+  }
+
+  small {
+    display: block;
+    margin: 8px 0 0 0;
+    color: $slateLight;
+    font-style: italic;
+  }
+
+  :global .col-sm-8 > div {
+    max-width: none;
+  }
+
+  @media (max-width: $screenSm) {
+    margin: 0 18px 32px;
+    max-width: none;
+  }
+}
+
+.changeAvatarButton {
+  margin: 7px 0 0 24px !important;
+  vertical-align: top;
+  padding: 9px 20px 4px !important;
+  border-radius: 3px !important;
+}
+
+.resumeButton {
+}
+
+.viewResumeButton {
+  margin: 0 0 0 8px;
+
+  @media (max-width: $screenXs) {
+    margin: 12px 0 0 0;
+  }
+}
+
+.switch {
+  vertical-align: top;
+  margin: 16px 0 0 0;
+  display: block;
+}
+
+.formActions {
+}
+
+.saveButton {
+  display: block;
+  margin: 42px auto 0;
+  max-width: 340px;
+  width: 100%;
+}
+

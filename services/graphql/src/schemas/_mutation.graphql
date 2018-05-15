@@ -1,0 +1,84 @@
+type Mutation {
+  ############
+  ### USER ###
+  ############
+
+  # Sign up a new User
+  userSignup (
+    input: UserSignupInput!
+  ): User!
+  # Complete signup for a User
+  userCompleteSignup (
+    input: UserCompleteSignupInput!
+  ): User
+  # Login an existing User
+  userLogin (
+    input: UserLoginInput!
+  ): User
+  # Update a User's plan
+  userUpdatePlan (
+    input: UserUpdatePlanInput!
+  ): User
+  # Cancel a User's plan
+  userCancelPlan: User
+  # Add a coupon to user's subscription
+  userAddCoupon (
+    input: UserAddCouponInput!
+  ): User
+  # Update a User's billing info
+  userUpdateBilling (
+    input: UserUpdateBillingInput!
+  ): User
+  # Update a User's password
+  userChangePassword (
+    input: UserChangePasswordInput!
+  ): User
+  # Update a User's password when logged in
+  userLoggedChangePassword (
+    input: UserLoggedChangePasswordInput!
+  ): User
+  # Send a forgot password email for a User
+  userForgotPassword (
+    input: UserForgotPasswordInput!
+  ): Boolean
+  # Spoofs a user (admin only)
+  userSpoof (
+    input: UserSpoofInput!
+  ): User
+  # Update the current User's profile
+  userUpdateMyProfile (
+    input: UserUpdateMyProfileInput!
+  ): User
+  # Update the current User's settings
+  userUpdateMySettings (
+    input: UserUpdateMySettingsInput!
+  ): User
+  # Enable SMS for a user with a given phone input
+  userEnableSMS (
+    input: UserEnableSMSInput
+  ): User
+  # Exchange a redirect token for a proper user token
+  userExchangeRedirectToken (
+    input: UserExchangeRedirectTokenInput!
+  ): User
+
+
+  ############
+  ### POST ###
+  ############
+
+  createPost (
+    input: PostInput!
+  ): Post!
+  updatePost (
+    input: PostInput!
+  ): Post!
+
+  ############
+  ### FILE ###
+  ############
+
+  createPhoto (
+    input: FileInput!
+  ): File!
+}

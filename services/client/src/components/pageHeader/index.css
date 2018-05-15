@@ -1,0 +1,30 @@
+.pageHeader {
+  background: white;
+  padding: 72px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    color: $slate;
+    font-weight: bold;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p {
+    margin: 24px 0 0;
+    color: $slateLight;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 0.94;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.moreTopPadding {
+  padding-top: 124px;
+}
+
+.moreBottomPadding {
+  padding-bottom: 98px;
+}

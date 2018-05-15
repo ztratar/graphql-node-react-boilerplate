@@ -1,0 +1,33 @@
+.tagRadioTable {
+  thead {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $slateLighter;
+  }
+
+  th, td {
+    padding: 3px 14px;
+    text-align: center;
+
+    @media (max-width: 400px) {
+      padding: 3px 11px;
+    }
+  }
+
+  th {
+    padding-bottom: 6px;
+  }
+}
+
+.titleCol {
+  min-width: 210px;
+  text-align: left !important;
+  padding-left: 0 !important;
+
+  @media (max-width: 400px) {
+    min-width: 160px;
+  }
+}
+
+.hideTable { display: none; }

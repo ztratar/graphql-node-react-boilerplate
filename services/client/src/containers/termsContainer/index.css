@@ -1,0 +1,16 @@
+.termsContainer {
+}
+
+.box {
+  padding: 42px;
+  max-width: 960px;
+  margin: -32px auto 64px;
+
+  h2 {
+    margin-top: 42px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

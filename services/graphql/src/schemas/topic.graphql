@@ -1,0 +1,33 @@
+# Used to model a Topic object
+type Topic {
+  # The primary key
+  id: ID!
+  # The title of the Topic
+  title: String!
+  # The slug of the Topic
+  slug: String!
+}
+
+# Used to create or select a Topic
+input TopicInput {
+  # The primary key of a Topic
+  id: ID
+  # The title of a Topic to create
+  title: String
+}
+
+# Used to suggest Topics
+input TopicSuggestInput {
+  # The text for Topic suggestion
+  text: String
+}
+
+# Used to query Topics
+input TopicQueryInput {
+  offset: Int
+}
+
+# Used to query Topics
+input TopicSlugQueryInput {
+  slug: String!
+}

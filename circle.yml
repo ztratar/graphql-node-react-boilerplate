@@ -1,0 +1,24 @@
+machine:
+  node:
+    version: 4.4.2
+  services:
+    - docker
+
+dependencies:
+  override:
+    - make environment
+    - make dependencies
+
+test:
+  override:
+    - make lint
+    - make test
+    - make clean
+    - make
+    - make package
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - make push

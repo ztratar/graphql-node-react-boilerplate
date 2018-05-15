@@ -1,0 +1,160 @@
+.icon {
+  :global .icon {
+    line-height: 0;
+  }
+}
+
+.svgIcon {
+}
+
+.outlined {
+  display: inline-block;
+  border: 1px solid $slateLight;
+  text-align: center;
+  border-radius: 100px;
+
+  i {
+    color: $slateLight;
+  }
+}
+
+.outlined-tn {
+  composes: outlined;
+  width: 28px;
+  height: 28px;
+
+  i {
+    line-height: 28px !important;
+  }
+}
+
+.outlined-sm {
+  composes: outlined;
+  width: 38px;
+  height: 38px;
+
+  i {
+    line-height: 38px !important;
+  }
+}
+
+.outlined-md {
+  composes: outlined;
+  width: 52px;
+  height: 52px;
+
+  i {
+    line-height: 52px !important;
+  }
+}
+
+.outlined-lg {
+  composes: outlined;
+  width: 60px;
+  height: 60px;
+
+  i {
+    line-height: 62px !important;
+  }
+}
+
+.outlined-vlg {
+  composes: outlined;
+  width: 84px;
+  height: 84px;
+
+  i {
+    line-height: 84px !important;
+  }
+}
+
+.size-tn {
+  i {
+    line-height: 16px;
+    font-size: 16px;
+  }
+}
+
+.size-sm {
+  i {
+    line-height: 22px;
+    font-size: 22px;
+  }
+}
+
+.size-md {
+  i {
+    line-height: 28px;
+    font-size: 28px;
+  }
+}
+
+.size-lg {
+  i {
+    line-height: 32px;
+    font-size: 32px;
+  }
+}
+
+.size-vlg {
+  i {
+    line-height: 42px;
+    font-size: 42px;
+  }
+}
+
+.color-blue {
+  border-color: rgba(93, 126, 203, 0.64) !important;
+
+  i {
+    color: $blue;
+  }
+}
+
+.color-slate {
+  border-color: $slate !important;
+
+  i {
+    color: $slate;
+  }
+}
+
+.color-white {
+  border-color: $white !important;
+
+  i {
+    color: $white;
+  }
+}
+
+.color-green {
+  border-color: $green !important;
+
+  i {
+    color: $green;
+  }
+}
+
+.color-red {
+  border-color: $red !important;
+
+  i {
+    color: $red;
+  }
+}
+
+.color-orange {
+  border-color: $orange !important;
+
+  i {
+    color: $orange;
+  }
+}
+
+.color-pink {
+  border-color: $pink !important;
+
+  i {
+    color: $pink;
+  }
+}

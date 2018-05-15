@@ -1,0 +1,20 @@
+.radio {
+  padding: 15px 24px 15px 24px !important;
+  margin: 0 18px 0 0 !important;
+
+  input {
+    left: 0;
+    top: 15px;
+    margin-left: 0 !important;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 16px;
+    color: $slateLight;
+  }
+
+  &:last-child {
+    padding-right: 0 !important;
+  }
+}

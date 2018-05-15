@@ -1,0 +1,68 @@
+.input {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0;
+  font-size: 16px;
+  padding: 0 18px;
+  max-width: 342px;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  &::placeholder {
+    color: $greyDarker;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.13);
+    border-color: #96b5f9;
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.13), 0 0 1px #4f6eb5;
+  }
+}
+
+.sm {
+  height: 34px;
+  padding: 0 10px;
+}
+
+.md {
+  height: 52px;
+  padding: 0 18px;
+}
+
+.lg {
+  height: 52px;
+  padding: 0 18px;
+}
+
+.vlg {
+  height: 60px;
+}
+
+.white {
+  background: $white;
+  border: 1px solid $white;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.06);
+  border-radius: 5px;
+
+  &:focus {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px 0px rgba(104,138,216,0.87), 0px 0px 4px 0px rgba(38,42,220,0.52), 0px 2px 21px 0px rgba(0,0,0,0.03), 0px 1px 4px 0px rgba(21,40,104,0.11);
+    border-color: white;
+  }
+
+  &:disabled {
+    background: white;
+  }
+}
+
+.greyLightest {
+  background: #fbfbfc;
+  box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.08);
+  border: 1px solid $grey;
+}
+
+.fullWidth {
+  max-width: none;
+  width: 100%;
+}

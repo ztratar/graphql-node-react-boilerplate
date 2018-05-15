@@ -1,0 +1,42 @@
+:global {
+  html, body {
+    font-family: 'Lato';
+    background: #f6f6f9;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    &.noscroll {
+      overflow-y: hidden;
+    }
+  }
+
+  #root {
+    min-height: 100%;
+    transition: all 0.18s ease-out;
+  }
+
+  #svg-image-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  .blurBackground {
+    filter: url(#blur-effect);
+  }
+
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: $blue;
+  }
+}

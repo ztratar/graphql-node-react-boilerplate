@@ -1,0 +1,179 @@
+/*
+ * Button sizes
+ */
+
+.size-sm {
+  font-size: $textTiny;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.size-md {
+  font-size: $textSmall;
+  padding: 4px 12px 6px;
+  border-radius: 3px;
+}
+
+.size-lg {
+  font-size: $textBase;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.size-vlg {
+  font-size: $textBase;
+  padding: 14px 22px;
+  border-radius: 5px;
+}
+
+/*
+ * Default class
+ */
+.tag {
+  font-weight: bold;
+  border: none;
+  color: $slateLight;
+  position: relative;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  margin: 0 4px 4px 0;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    color: $slate;
+    box-shadow: 0 2px 4px rgba(0,0,0,.06);
+    transition: all 0.08s ease-out);
+
+    :global .btn-tooltip {
+      opacity: 1;
+    }
+  }
+
+  :global i.right {
+    float: right;
+    margin: -3px 0 0 12px;
+  }
+
+  &:disabled,
+  &[disabled='disabled'] {
+    background: $slateLight !important;
+    border-color: $slateLight !important;
+
+    &:hover {
+      background: $slateLight !important;
+      border-color: $slateLight !important;
+    }
+  }
+}
+
+.lightBtnText {
+  color: rgba(255,255,255,.94);
+
+  i {
+    color: white;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+/*
+ * Tag Backgrounds
+ */
+.background-light {
+  background: $white;
+}
+
+.background-dark {
+  composes: lightBtnText;
+  background: $slateLight;
+
+  &:hover {
+    background: color($slate lightness(+3%));
+  }
+
+  &:active,
+  &.active {
+    background: color($slate lightness(+3%));
+  }
+}
+
+.background-blue {
+  composes: lightBtnText;
+  background: $blue;
+
+  &:hover {
+    background: color($blue lightness(+3%));
+  }
+}
+
+.background-green {
+  composes: lightBtnText;
+  background: $green;
+
+  &:hover {
+    background: color($green lightness(+3%));
+  }
+}
+
+.background-red {
+  composes: lightBtnText;
+  background: $red;
+
+  &:hover {
+    background: color($red lightness(+3%));
+  }
+}
+
+.background-orange {
+  composes: lightBtnText;
+  background: $orange;
+
+  &:hover {
+    background: color($orange lightness(+3%));
+  }
+}
+
+.cancel {
+  display: inline-block;
+  vertical-align: top;
+  opacity: 0.7;
+  height: 18px;
+  width: 18px;
+  margin: 2px 0 0 8px;
+
+  i {
+    font-size: 20px;
+    margin: -6px 0 0 0;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cancel-sm {
+  width: 16px;
+  margin: 1px 0 0 6px;
+  vertical-align: top;
+
+  i {
+    font-size: 16px;
+    margin: -7px 0 0 0;
+  }
+}
+
+.cancel-lg {
+  height: 22px;
+}
+
+.cancel-vlg {
+  height: 22px;
+}

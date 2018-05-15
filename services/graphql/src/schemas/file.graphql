@@ -1,0 +1,26 @@
+# Used to model a File object
+type File implements Resource {
+  # Primary key
+  id: ID!
+  # The CDN key of the File
+  key: CDNKey!
+  # Time that the File was created
+  createdAt: Date!
+  # Time that the File was last updated
+  updatedAt: Date!
+  # Time that the File was destroyed
+  destroyedAt: Date
+  # Whether or not the File has been destroyed
+  destroyed: Boolean!
+}
+
+input FileInput {
+  # The ID of an existing file
+  id: ID
+  # Key for the file
+  key: String
+  # A file to store for the File object
+  content: String
+  # The url of a file to store for the File object
+  url: Url
+}

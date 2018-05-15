@@ -1,0 +1,12 @@
+.infiniteScrollView {
+  display: block;
+}
+
+.infiniteScrollChildren {
+}
+
+.loader {
+  margin: 32px 0;
+  text-align: center;
+  width: 100%;
+}
